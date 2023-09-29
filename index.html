@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://fontmeme.com/permalink/230928/a795cfdfc33aab8e26a5a3dd57b3f508.png">
+    <title>rent-a-car</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75b710a8ef.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <nav data-nav="close">
+        <div class="limited-range">
+            <div class="logo">
+                <a data-target="#home" onclick="scrollToSection(this)"><img src="./rent-a-car logo.png" alt=""></a>
+            </div>
+            <div class="content">
+                <div id="simulateDarkMode" class="container" data-theme="light">
+                    <button type="button" class="btn-toggle" onclick="toggleDarkMode()">
+                        <i  id="toggleDarkMode" class="fa-solid fa-sun"></i>
+                    </button>
+                </div>
+                <div class="top-sub-content">
+                    <i class="fa-solid fa-bars" onclick='navbar()'></i>
+                    <div class="top-sub-content-detail">
+                        <a data-target="#about" onclick="scrollToSection(this)">About</a>
+                        <a data-target="#projects" onclick="scrollToSection(this)">Projects</a>
+                        <a data-target="#contact" onclick="scrollToSection(this)">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-sub-content-detail">
+            <a data-target="#about" onclick="scrollToSection(this)">About</a>
+            <a data-target="#projects" onclick="scrollToSection(this)">Projects</a>
+            <a data-target="#contact" onclick="scrollToSection(this)">Contact</a>
+        </div>
+    </nav>
+    
+    <div id="home">Home</div>
+    <div id="about">About</div>
+    <div id="projects">Projects</div>
+    <div id="contacts">Contacts</div>
+    <script src="index.js"></script>
+</body>
+</html>
