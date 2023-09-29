@@ -1,7 +1,11 @@
 document.addEventListener('click', function (event) {
+    content = document.querySelector('.top-sub-content');
+    navBar = content.querySelector('.fa-solid');
     const nav = document.querySelector('nav[data-nav="open"]');
     if (nav && !nav.contains(event.target)) {
         nav.setAttribute('data-nav', 'close');
+navBar.classList.add("fa-bars");
+        navBar.classList.remove("fa-xmark");
     }
   });
   
