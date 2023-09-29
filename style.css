@@ -80,43 +80,13 @@ small {font-size: 0.750rem; /* 12px */}
     outline: none;
   }
 
-    nav{
-        &> .top-sub-content-detail{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        min-width:100vw;
-        transition: all 0.3s ease-in-out;
-        & a{
-        text-align: center;
-        min-width:100vw;
-        border-bottom: 2px solid var(--accent);
-        }
-        & a:hover{
-            transition: all 0.3s;
-            background-color: var(--accent);
-            color: var(--background);
-        }
-    }
-    &[data-nav="close"]> .top-sub-content-detail{
-        transform: scaleY(0);
-        transform-origin: top center;
-        height:0;
-    }
-    &[data-nav="open"]> .top-sub-content-detail{
-        transform: scaleY(1);
-        transform-origin: top center;
-        height: 10vh;
-    }
-}
-
   nav{
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     color:var(--accent);
     width: 100vw;
@@ -144,6 +114,37 @@ small {font-size: 0.750rem; /* 12px */}
         height:8vh;
         margin: 10px 0px 10px 0px;
     }
+        &> .top-sub-content-detail{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        min-width:100vw;
+        transition: all 0.3s ease-in-out;
+        & a{
+        border-bottom: 2px solid var(--accent);
+        }
+        }
+        & a{
+        text-align: center;
+        min-width:100vw;
+        background-color: var(--background);
+        }
+        & a:hover{
+            transition: all 0.3s;
+            background-color: var(--accent);
+            color: var(--background);
+        }
+    &[data-nav="close"]> .top-sub-content-detail{
+        transform: scaleY(0);
+        transform-origin: top center;
+        height:0;
+    }
+    &[data-nav="open"]> .top-sub-content-detail{
+        transform: scaleY(1);
+        transform-origin: top center;
+        height: 10vh;
+    }
   }
 
   .top-sub-content>i{
@@ -157,7 +158,8 @@ small {font-size: 0.750rem; /* 12px */}
 
 /* the rest */
 #home,#about,#projects, #contacts{
-    height: 100vh;
+    padding-top: 11vh;
+    height: 89vh;
 }
 
 
