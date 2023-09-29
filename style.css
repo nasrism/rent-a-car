@@ -157,7 +157,7 @@ small {font-size: 0.750rem; /* 12px */}
   }
 
 /* the rest */
-#home,#about,#projects, #contacts{
+#home,#about,#projects, #contact{
     padding-top: 11vh;
     height: 89vh;
 }
