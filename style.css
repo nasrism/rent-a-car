@@ -2,6 +2,7 @@
 
 *{
     /* border: 1px solid red; */
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -33,7 +34,8 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-html {font-size: 100%;
+html {
+    font-size: 100%;
     color: var(--text);
     transition: all 0.3s;
 } /* 16px */
@@ -89,6 +91,7 @@ small {font-size: 0.750rem; /* 12px */}
     align-items: center;
     flex-direction: column;
     color:var(--accent);
+    background-color: var(--background);
     width: 100vw;
     border-bottom: 2px solid var(--accent);
     transition: all 0.3s ease-in-out;
