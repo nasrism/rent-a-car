@@ -28,7 +28,6 @@ document.addEventListener('click', function (event) {
   // this also
   function navibar() {
     const[nav,content,navBar,currentNavState]=read();
-    read(nav,content,navBar,currentNavState);
     if (currentNavState === 'open'){
     nav.setAttribute('data-nav', 'close');
     navBar.classList.add("fa-bars");
