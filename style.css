@@ -219,6 +219,7 @@ small {font-size: 0.750rem; /* 12px */}
       border-right: 1px solid var(--primary);
     } 
   }
+  /* part of this it cannot read */
   &>button:hover{
     background-color: var(--primary);
     color: var(--background);
