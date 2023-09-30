@@ -43,10 +43,33 @@
         </div>
     </nav>
     
-    <div id="home">Home</div>
-    <div id="about">About</div>
-    <div id="projects">Projects</div>
-    <div id="contact">Contacts</div>
+    <div id="home">
+        <div class="logo"><img src="./rent-a-car logo.png" alt=""></div>
+        
+        <h2>Easy, fast, reliable!</h2>
+        
+        <div class="sch-bar">
+
+            <button class="car-type"><i class="fa-solid fa-car"></i></button>
+            <input class="location" type="text" placeholder="type your pick-up location!"> 
+            <button class="set-time" onclick="setTime(this)"><i class="fa-solid fa-calendar-days"></i></button>
+            <button class="sch"><i class="fa-solid fa-magnifying-glass"></i></button>
+       
+            <ul id="car-type-menu" style="opacity: 0; display: none;">
+                <li>Sedan</li>
+                <li>SUV</li>
+                <li>Truck</li>
+                <li>Convertible</li>
+            </ul>
+       
+        </div>
+
+
+    </div>
+
+    <div id="about" class="limited-range">About</div>
+    <div id="projects" class="limited-range">Projects</div>
+    <div id="contact" class="limited-range">Contacts</div>
     <script src="index.js"></script>
 </body>
 </html>

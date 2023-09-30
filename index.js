@@ -52,10 +52,8 @@ navBar.classList.add("fa-bars");
   function toggleDarkMode() { 
     const container = document.querySelector(':root');
      const buttonDarkMode = document.querySelector('#toggleDarkMode');
-     const logo = document.querySelector('.logo');
      const dataTheme = container.getAttribute('data-theme');
-       logo.classList.toggle("invert");
-     
+
      if(dataTheme === 'dark') {
        container.setAttribute('data-theme', 'light');
        buttonDarkMode.classList.add("fa-sun");
@@ -66,3 +64,35 @@ navBar.classList.add("fa-bars");
        buttonDarkMode.classList.add("fa-moon");
      }
    }
+
+   // Get references to the button and car type menu
+const button = document.querySelector('.car-type');
+const menu = document.getElementById('car-type-menu');
+const carTypeOptions = menu.querySelectorAll('li');
+
+// Add a click event listener to each car type option
+carTypeOptions.forEach(function(option) {
+    option.addEventListener('click', function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        
+        // Update the button's innerHTML with the selected car type
+        button.innerHTML = `${option.textContent}`;
+        
+        // Hide the car type menu
+        menu.style.display = 'none';
+        menu.style.opacity = '0';
+    });
+});
+
+// Add a click event listener to the button to toggle the menu
+button.addEventListener('click', function(event) {
+    // Toggle the display of the car type menu
+    if (menu.style.opacity === '0' || menu.style.opacity === '') {
+        menu.style.opacity = '1';
+        menu.style.display = 'flex';
+    } else {
+        menu.style.opacity = '0';
+        menu.style.display = 'none';
+    }
+});
