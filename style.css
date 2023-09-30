@@ -43,6 +43,11 @@ html {
     color: var(--text);
     transition: all 0.3s;
 } /* 16px */
+
+li, input, button{
+  color:var(--text);
+}
+
 i {
   color: var(--text);
     scale:1.5;
@@ -179,6 +184,9 @@ small {font-size: 0.750rem; /* 12px */}
 /* search bar */
 
 #home{
+  background-image: url(https://media.istockphoto.com/id/1221473473/photo/buyer-of-car-shaking-hands-with-seller-in-auto-dealership-view-from-interior-of-car.jpg?s=1024x1024&w=is&k=20&c=0xUgulHKyebPhL5b9xugiROFwhoGnEAl9LhWPTjYqGs=);
+  background-size: cover;
+  filter: blur(8px);
   display: grid;
   justify-items: center;
   align-content: center;
@@ -226,7 +234,7 @@ small {font-size: 0.750rem; /* 12px */}
     cursor: pointer;
   }
   &>.location{
-    opacity: 0.5;
+    opacity: 0.8;
     text-align: left;
     width:60%;
     padding-left: 20px;
@@ -239,7 +247,7 @@ small {font-size: 0.750rem; /* 12px */}
 }
 
 input[type=text]:focus {
-  border: opx;
+  border: none;
 }
 #car-type-menu{
   justify-content: space-evenly;
