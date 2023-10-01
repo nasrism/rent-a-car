@@ -53,6 +53,11 @@ i {
     scale:1.5;
 }
 
+a{
+  text-decoration: none;
+  color: var(--accent);
+}
+
 h1 {font-size: 4.210rem; /* 67.36px */}
 
 h2 {font-size: 3.158rem; /* 50.56px */}
@@ -176,14 +181,27 @@ small {font-size: 0.750rem; /* 12px */}
   }
 
 /* the rest */
-#home,#about,#projects, #contact{
+#home,#login, #review{
+  position: relative;
     padding-top: 11vh;
     height: 89vh;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+&>.bg{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  filter: blur(3px) brightness(0.5);
+}
 }
 
 /* search bar */
-
-#home{
+/* #home>.bg{
+  background-image: url(https://media.istockphoto.com/id/1221473473/photo/buyer-of-car-shaking-hands-with-seller-in-auto-dealership-view-from-interior-of-car.jpg?s=1024x1024&w=is&k=20&c=0xUgulHKyebPhL5b9xugiROFwhoGnEAl9LhWPTjYqGs=);
+  background-size: cover;
+} */
+#home .limited-range{
   display: grid;
   justify-items: center;
   align-content: center;
@@ -205,7 +223,8 @@ small {font-size: 0.750rem; /* 12px */}
   border-radius: 20vmin;
   border: 2px solid var(--primary);
   min-width: 90%;
-  min-height: 10vh;
+  min-height: 7vh;
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
   
   &>button{
     min-width: 10%;
@@ -214,6 +233,13 @@ small {font-size: 0.750rem; /* 12px */}
     height: 100%;
     border: none;
     transition: all 0.3s;
+
+    &:hover{
+      scale:1.05;
+    }
+    &:active{
+      scale:1;
+    }
 
     &.set-time,&.sch{
     border-left: 1px solid var(--primary);
@@ -267,8 +293,80 @@ input[type=text]:focus {
   }
 }
 
+#set-time-both{
+  display: flex;
+  position: absolute;
+  bottom: 12%;
+  min-width: 80%;
+  height: 5vh;
+  justify-content: space-evenly;
+  align-items:center; 
+  background-color: var(--primary);
+  border-radius: 20vmin;
+  padding:10px;
+  transition: all 0.3s;
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+}
 
+input[type="date"], input[type="submit"]{
+  background-color: transparent;
+  border: none;
+}
 
+.from,.to{
+  display: flex;
+  &>p{
+  margin-right: 5px;
+
+  }
+}
+
+#signup{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.sign-up-card{
+position: absolute;
+top: 50%;
+left:50%;
+transform:translate(-50%,-50%);
+padding:10px;
+  width: 300px;
+  border-radius: 30px;
+  background-color: var(--primary);
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+  text-align: center;
+
+}
+
+.su-li-button{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  &>a{
+    padding: 20px;
+    text-align: center;
+    border-radius: 45px;
+    transition: all 0.2s;
+    background-color: var(--secondary);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+
+    &:hover{
+      transform: scale(1.05);
+    }
+    &:active{
+      transform: scale(0.95);
+      background-color: var(--accent);
+      color: var(--text);
+    }
+  }
+}
 
   /* mobile first */
   @media (min-width:600px) { 

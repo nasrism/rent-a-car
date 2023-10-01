@@ -66,9 +66,9 @@ navBar.classList.add("fa-bars");
    }
 
    // Get references to the button and car type menu
-const button = document.querySelector('.car-type');
-const menu = document.getElementById('car-type-menu');
-const carTypeOptions = menu.querySelectorAll('li');
+const carButton = document.querySelector('.car-type');
+const carMenu = document.getElementById('car-type-menu');
+const carTypeOptions = carMenu.querySelectorAll('li');
 
 // Add a click event listener to each car type option
 carTypeOptions.forEach(function(option) {
@@ -77,22 +77,49 @@ carTypeOptions.forEach(function(option) {
         event.preventDefault();
         
         // Update the button's innerHTML with the selected car type
-        button.innerHTML = `${option.textContent}`;
+        carButton.innerHTML = `${option.textContent}`;
         
         // Hide the car type menu
-        menu.style.display = 'none';
-        menu.style.opacity = '0';
+        carMenu.style.display = 'none';
+        carMenu.style.opacity = '0';
     });
 });
 
 // Add a click event listener to the button to toggle the menu
-button.addEventListener('click', function(event) {
+carButton.addEventListener('click', function(event) {
     // Toggle the display of the car type menu
-    if (menu.style.opacity === '0' || menu.style.opacity === '') {
-        menu.style.opacity = '1';
-        menu.style.display = 'flex';
+    if (carMenu.style.opacity === '0' || carMenu.style.opacity === '') {
+        carMenu.style.opacity = '1';
+        carMenu.style.display = 'flex';
     } else {
-        menu.style.opacity = '0';
-        menu.style.display = 'none';
+        carMenu.style.opacity = '0';
+        carMenu.style.display = 'none';
     }
 });
+
+
+
+
+   // Get references to the button and car type menu
+   const dateMenu = document.getElementById('set-time-both');
+   
+   // Add a click event listener to the button to toggle the menu
+   function setTime(){
+       if (dateMenu.style.opacity === '0' || dateMenu.style.opacity === '') {
+           dateMenu.style.opacity = '1';
+       } else {
+           dateMenu.style.opacity = '0';
+       }
+      }
+
+      // Get references to the button and car type menu
+   const signMenu = document.getElementById('signup');
+   
+   // Add a click event listener to the button to toggle the menu
+   function signup(){
+       if (signMenu.style.scale === '0' || signMenu.style.scale === '') {
+           signMenu.style.scale = '1';
+       } else {
+           signMenu.style.scale = '0';
+       }
+      }
