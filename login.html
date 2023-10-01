@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://fontmeme.com/permalink/230928/a795cfdfc33aab8e26a5a3dd57b3f508.png">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="register-card">
+        <img src="./rent-a-car logo.png" alt="">
+        <input type="email" name="" id="" placeholder="Email">
+        <input type="password" name="" id="password" placeholder="Password">
+        <div class="show-pass">
+            <input type="checkbox" name="" id="show-password" onclick="toggle()">
+            <label for="show-password">show-password</label>
+        </div>
+        <div class="enter-button">
+            <a href="./signup.html">Don't have account?</a>
+            <a href="./index.html" class="enter" onclick="check()">Log in</a>
+        </div>
+    </div>
+    <script>
+        const password = document.getElementById('password');
+        toggle=()=> password.type==="password"?password.type="text":password.type="password"
+        check=()=>alert('Thank you for trying this :)');
+    </script>
+</body>
+</html>
